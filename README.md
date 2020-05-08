@@ -31,7 +31,7 @@ Original Tutorial: [How To Create A Login System In PHP For Beginners | Procedur
    4.4 `docker image ls`
       - check if the fix works
 
-### Create a ```docker-compose``` configuration
+### Create a `docker-compose` configuration
 
 1. see https://github.com/dele1972/docnt-ngpm
 
@@ -39,7 +39,7 @@ Original Tutorial: [How To Create A Login System In PHP For Beginners | Procedur
 
    - `MYSQL_PASSWORD=secret`
 
-3. insert following line to docker/php-fpm/Dockerfile`, in line 15 (to enable mysqli):
+3. insert following line to `docker/php-fpm/Dockerfile`, in line 15 (to enable mysqli):
 
    - `RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli`
    - because this tutorial is using mysqli instead of pdo
