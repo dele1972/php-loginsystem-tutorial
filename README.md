@@ -3,7 +3,8 @@ Project generated during external Tutorial, with own modification
 
 Original Tutorial: [How To Create A Login System In PHP For Beginners | Procedural MySQLi | 2018 PHP Tutorial | mmtuts]( https://youtu.be/LC9GaXkdxF8) (10.10.2018)
 
-   - Current Position: https://youtu.be/LC9GaXkdxF8#t=44m21s
+   - Current Position: https://youtu.be/LC9GaXkdxF8#t=1h13m25s
+   - ~~Current Position: https://youtu.be/LC9GaXkdxF8#t=44m21s~~
 
 # Setting up the development environment
 
