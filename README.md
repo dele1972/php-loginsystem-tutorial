@@ -3,7 +3,8 @@ Project generated during external Tutorial, with own modification
 
 Original Tutorial: [How To Create A Login System In PHP For Beginners | Procedural MySQLi | 2018 PHP Tutorial | mmtuts]( https://youtu.be/LC9GaXkdxF8) (10.10.2018)
 
-   - Current Position: https://youtu.be/LC9GaXkdxF8#t=1h13m25s
+   - Current Position: https://youtu.be/LC9GaXkdxF8#t=1h43m09s (error handling)
+   - ~~Current Position: https://youtu.be/LC9GaXkdxF8#t=1h13m25s (login/logout)~~
    - ~~Current Position: https://youtu.be/LC9GaXkdxF8#t=44m21s~~
 
 # Setting up the development environment
@@ -56,11 +57,30 @@ Original Tutorial: [How To Create A Login System In PHP For Beginners | Procedur
 ## Create DB and Table
 
 
-```
+```(shell)
 docker exec -it docker_mysql_1 bash
+
 mysql --user=root --password=docker
+
 show databases;
+
 create database loginsystemtut default character set utf8 default collate utf8_general_ci;
+
 use loginsystemtut;
+
 create table users ( idUsers int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL, uidUsers tinytext NOT NULL, emailUsers tinytext NOT NULL, pwdUsers longtext NOT NULL );
 ```
+
+### Some command line actions to 'admin'
+
+| command | comment |
+| --- | --- |
+| `docker exec -it docker_mysql_1 bash` | start **mysql bash** (docker) |
+| `mysql --user=root --password=docker` | open **mariaDB client** |
+| `show databases;` | **show** all **databases** |
+| `use loginsystemtut;` | **select a database** |
+| `describe users;` | **show table structure** |
+| `SELECT * FROM users;` | **show all entries** of table user|
+
+* https://mariadb.com/kb/en/basic-sql-statements/
+* https://www.hostwinds.com/guide/how-to-use-mysql-mariadb-from-command-line/

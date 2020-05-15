@@ -1,10 +1,10 @@
 <?php
     // handles the signup form
 
-    // avoid direct access to this file, only by click signup-submit
+    // avoid direct access to this file, only by click signup-submit button
     if (isset($_POST['signup-submit'])) {
 
-        require 'dbh.inc.php';
+        require 'dbh.inc.php';  # our own db handler
 
         $username = $_POST['uid'];
         $email = $_POST['mail'];
@@ -40,7 +40,7 @@
             $stmt = mysqli_stmt_init($conn);
             # rule: allways check for errors first when you create php code :)
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: ../signup.php?error=sqlerror1&uid=".$username."&mail=".$email);
+                header("Location: ../signup.php?error=sqlerror&uid=".$username."&mail=".$email);
                 exit();
             }
             else {
@@ -58,7 +58,7 @@
                     $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?, ?, ?)";
                     $stmt = mysqli_stmt_init($conn);
                     if (!mysqli_stmt_prepare($stmt, $sql)) {
-                        header("Location: ../signup.php?error=sqlerror2&uid=".$username."&mail=".$email);
+                        header("Location: ../signup.php?error=sqlerror&uid=".$username."&mail=".$email);
                         exit();
                     }
                     else {
