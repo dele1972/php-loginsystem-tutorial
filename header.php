@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <meta name="description" content="This is a php login Project by working a tutorial">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <title>Login System Tutorial</title>
 
     </head>
