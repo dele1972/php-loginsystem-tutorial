@@ -119,7 +119,7 @@ create table users ( idUsers int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL, uidUse
 | `describe users;` | **show table structure** |
 | `SELECT * FROM users;` | **show all entries** of table user|
 | `docker system df` | List images and containers |
-| `docker ps -aq -f status=exited | xargs -r docker rm` | remove all docker container |
+| `docker ps -aq -f status=exited \| xargs -r docker rm` | remove all docker container |
 | `docker system prune -a` | remove any stopped containers and all unused images |
 
 
